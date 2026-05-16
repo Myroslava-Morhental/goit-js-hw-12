@@ -1,0 +1,185 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+
+  width: 48px;
+  height: 48px;
+  border: 5px solid #000;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  gap: 24px;
+}
+
+.gallery-item {
+  width: 360px;
+  height: 200px;
+}
+
+.gallery-link {
+  display: block;
+}
+
+.gallery-image {
+  display: block;
+  width: 360px;
+  height: 200px;
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  gap: 8px;
+  width: 371px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.form input {
+  width: 272px;
+  height: 40px;
+  outline: none;
+  padding: 5px 10px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  color: #808080;
+}
+
+.form input:hover {
+  border: 1px solid #000000;
+}
+
+.form input:focus {
+  border: 1px solid #4e75ff;
+}
+
+input[placeholder] {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+}
+
+.form button {
+  border: none;
+  border-radius: 8px;
+  width: 91px;
+  height: 100%;
+  background-color: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
+
+/* Gallery styles */
+.gallery {
+  display: flex;
+  max-width: 1128px;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-link {
+  display: flex;
+  height: 152px;
+}
+
+.gallery-img {
+  object-fit: cover;
+}
+
+.gallery-info {
+  display: flex;
+  padding: 4px 20px;
+  justify-content: space-between;
+}
+
+.info-title {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.info-qty {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
