@@ -105,6 +105,6 @@ async function onLoadMore() {
       position: 'topRight',
     });
   } finally {
-    hideloader();
+    hideLoader();
   }
 }
