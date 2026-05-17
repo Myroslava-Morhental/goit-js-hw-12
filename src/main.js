@@ -29,6 +29,7 @@ async function handleSubmit(event) {
   event.preventDefault();
 
   currentQuery = input.value.trim();
+  page = 1;
 
   if (!currentQuery) {
     iziToast.error({
